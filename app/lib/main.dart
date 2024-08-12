@@ -1,26 +1,23 @@
-import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'forgot_password_screen.dart';
-import 'register_screen.dart';
 
-void main() {
-  runApp(EasyServiceApp());
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'splashview.dart';
+
+void main(){
+runApp(const App());
+
 }
 
-class EasyServiceApp extends StatelessWidget {
+class App extends StatelessWidget {
+  const App({super.key}); 
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'easyService',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => LoginScreen(),
-        '/forgot_password': (context) => ForgotPasswordScreen(),
-        '/register': (context) => RegisterScreen(),
-      },
+    return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
     );
   }
 }
+
