@@ -10,18 +10,18 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     // Usando WidgetsBinding para garantir que o Timer seja chamado após a construção do widget
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Timer(const Duration(seconds: 2), () {
+      Timer(const Duration(seconds: 3), () {
         Get.to(() => LoginView()); // Correção na navegação com Get
       });
     });
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 247, 199, 79),
+      backgroundColor: const Color.fromARGB(255, 16, 233, 226),
       body: const Center(
         child: Text(
           'EasyService',
           style: TextStyle(
-            color: Colors.brown,
+            color: Colors.black,
             fontSize:35,
             fontWeight:FontWeight.bold
           ),
