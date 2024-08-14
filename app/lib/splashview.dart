@@ -16,7 +16,7 @@ class SplashView extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 16, 233, 226),
+      backgroundColor: Colors.white,
       body: const Center(
         child: Text(
           'EasyService',
