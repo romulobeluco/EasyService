@@ -1,7 +1,8 @@
+import 'package:app/cadastro.dart';
 import 'package:flutter/material.dart';
 import 'package:app/widgets/buttonglobal.dart';
 import 'package:app/widgets/textformglobal.dart';
-import 'package:app/home.dart';
+import 'package:app/senharecovery.dart';
 
 class LoginView extends StatelessWidget {
   LoginView({super.key});
@@ -53,7 +54,22 @@ class LoginView extends StatelessWidget {
                   obscure: true,
                 ),
                 const SizedBox(height: 10),
-                const ButtonGlobal(),
+                ButtonGlobal(
+                  text: 'Sign in',
+                  onTap: () {
+                    // Ação do botão de Sign in
+                  },
+                ),
+                const SizedBox(height: 10), // Espaçamento entre os botões
+                ButtonGlobal(
+                  text: 'Cadastrar-se',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignupView()),
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -64,7 +80,7 @@ class LoginView extends StatelessWidget {
         color: Colors.white,
         alignment: Alignment.center,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center, // Alinhamento centralizado
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Esqueceu a senha?'),
             InkWell(
@@ -85,4 +101,3 @@ class LoginView extends StatelessWidget {
     );
   }
 }
-

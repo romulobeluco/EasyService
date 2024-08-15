@@ -17,14 +17,25 @@ class SplashView extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: const Center(
-        child: Text(
-          'EasyService',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize:35,
-            fontWeight:FontWeight.bold
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'EasyService',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 30), // Espaçamento entre o texto e a logo
+            Image.asset(
+              'images/logoeasy.png', // Caminho para o arquivo da logo
+              width: 300, // Ajuste de tamanho conforme necessário
+              height: 300,
+            ),
+          ],
         ),
       ),
     );
