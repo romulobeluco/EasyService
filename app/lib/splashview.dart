@@ -24,8 +24,8 @@ class SplashView extends StatelessWidget {
             const Text(
               'EasyService',
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 35,
+                color: Color.fromARGB(255, 78, 55, 36),
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),

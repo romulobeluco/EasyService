@@ -1,4 +1,6 @@
 import 'package:app/cadastro.dart';
+import 'package:app/home.dart';
+import 'package:app/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:app/widgets/buttonglobal.dart';
 import 'package:app/widgets/textformglobal.dart';
@@ -26,7 +28,7 @@ class LoginView extends StatelessWidget {
                   child: Text(
                     'EasyService',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Color.fromARGB(255, 78, 55, 36),
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ),
@@ -55,9 +57,12 @@ class LoginView extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ButtonGlobal(
-                  text: 'Sign in',
+                  text: 'Entrar',
                   onTap: () {
-                    // Ação do botão de Sign in
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
                   },
                 ),
                 const SizedBox(height: 10), // Espaçamento entre os botões
