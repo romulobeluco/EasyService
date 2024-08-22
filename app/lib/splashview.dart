@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart'; // Importação do Get
 import 'dart:async'; // Importação do Timer
 
+
+
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
